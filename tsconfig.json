@@ -1,0 +1,14 @@
+{
+    "include": ["src", "test.ts"],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+        "outDir": "dist",
+        "sourceMap": true,
+        "module": "CommonJS",
+        "target": "ES2019",
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true
+    }
+}
