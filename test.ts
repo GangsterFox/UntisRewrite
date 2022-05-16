@@ -13,4 +13,5 @@ untis
     .then((answer) => {
         fs.writeFileSync('./test.json', JSON.stringify(answer))
         console.log("success")
+    .logout()
     });
