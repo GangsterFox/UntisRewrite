@@ -13,5 +13,6 @@ untis
 for (const user of answer) {
     if (user.gender == "female") males.push(user)
 }
+    .logout()
 console.log(males.length)
-    });
+});
