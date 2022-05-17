@@ -19,9 +19,7 @@ untis
         }
         console.log('females:', females.length);
         console.log('males:',  males.length);
-        console.log('Everyone:', males.length + females.length)
-    })
-    .then(() => {
+        console.log('Everyone:', males.length + females.length);
         untis.logout()
         console.log('\nlogged out')
     })
