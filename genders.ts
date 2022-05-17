@@ -15,6 +15,7 @@ untis
             if (user.gender == "female") females.push(user);
             else if (user.gender == "male") males.push(user)
         }
-        console.log('females: ' + females.length);
-        console.log('males: ' + males.length)
+        console.log('females:', females.length);
+        console.log('males:',  males.length);
+        console.log('Everyone:', males.length + females.length)
     }), untis.logout()
