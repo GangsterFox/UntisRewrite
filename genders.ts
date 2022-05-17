@@ -11,7 +11,7 @@ untis
     .then((fam) => {
         let females = [];
         let males = [];
-        fs.writeFileSync('./testing.json', JSON.stringify(fam))
+        fs.writeFileSync('./students.json', JSON.stringify(fam))
         console.log('written all students to a json')
         for (const user of fam) {
             if (user.gender == "female") females.push(user);
