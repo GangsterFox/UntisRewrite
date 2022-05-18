@@ -3,3 +3,5 @@ test.json
 students.json
 testing.json
 students.json
+.env
+cocainer.ts

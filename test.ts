@@ -1,8 +1,10 @@
 const WebUntisLib = require('webuntis');
 const fs = require('fs');
 const tomorrow = new Date()
+const dotenv = require('dotenv')
+dotenv.config()
+const QRCodeData = process.env.QRCodeData
 
-const QRCodeData = 'untis://setschool?url=herakles.webuntis.com&school=GoldenB Schule&user=HayvanDin&key=AJCO5JHYCHBIFEUC&schoolNumber=5401500';
 const untis = new WebUntisLib.WebUntisQR(QRCodeData);
 
 untis
