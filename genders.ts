@@ -18,9 +18,13 @@ untis
         fs.writeFileSync('./students.json', JSON.stringify(fam))
         console.log('written all students to a json \n')
         for (const user of fam) {
+            try {
             if (user.gender == "female") females.push(user);
             else if (user.gender == "male") males.push(user);
             else if (user.gender == "") unknown.push(user)
+            } catch (error) {
+                console.log(error)
+            };
         }
         console.log('females:', females.length);
         console.log('males:',  males.length);
