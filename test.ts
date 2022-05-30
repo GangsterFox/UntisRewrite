@@ -39,8 +39,6 @@ for (const teacher1 of entrys1) {
         };
 }
 console.log("\nteachers:", teacher.length)
-
-}).then(() => {
-    untis.logout()
-    console.log('\nlogged out')
-});
+untis.logout()
+console.log('\nlogged out')
+})
