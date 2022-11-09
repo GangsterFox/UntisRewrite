@@ -1,5 +1,5 @@
 # UntisRewrite
-A rewrite for the UntisAPI files I had, converted to ts
+A rewrite for the UntisAPI files I had
 
 # To do
 * clean up the code which is still kind of bad but I will rewrite it later down the line **done, kind of**
@@ -7,4 +7,4 @@ A rewrite for the UntisAPI files I had, converted to ts
 
 # Test.ts
 * this is a test script written using async
-* it is a bit slower at giving an output as it does everything at the same time
+* its faster when run than the students.js
