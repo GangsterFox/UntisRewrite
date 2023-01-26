@@ -47,3 +47,4 @@ untis
         untis.logout()
         console.log("\nlogged out")
     })
+    .logout()
