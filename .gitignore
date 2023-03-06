@@ -6,3 +6,8 @@ students.json
 .env
 cocainer.ts
 teachers.json
+rooms.json
+random.json
+classes.json
+timestamp.json
+year.json

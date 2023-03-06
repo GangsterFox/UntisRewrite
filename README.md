@@ -8,3 +8,4 @@ A rewrite for the UntisAPI files I had
 # test.js
 * this is a test script written using async
 * its faster when run than the students.js
+* it also has basically everything you want to fetch like classes, rooms, year, import date and some other things
