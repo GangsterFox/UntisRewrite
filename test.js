@@ -1,16 +1,13 @@
 const WebUntis = require('webuntis');
 const fs = require('fs');
-const dotenv = require('dotenv');
-dotenv.config();
-const QRCodeData = process.env.QRCodeData;
 const untis = new WebUntis('FTS-Villingen-Schwenningen', 'HayvanDin', 'Dinis2006.', 'arche.webuntis.com')
 
 // start of script
 untis.login().then(async () => {
-let females = [];
-let males = [];
-let unknown = [];
-let teacher = [];
+// let females = [];
+// let males = [];
+// let unknown = [];
+// let teacher = [];
 
 // fetch the data we need
 // const students = await untis.getStudents();
@@ -49,13 +46,13 @@ for (const user of entrys) {
 };
 
 // teachers count. also counts the hidden accounts like GT
-for (const teacher1 of entrys1) {
-    try {
-        if (teacher1.title == "") teacher.push(teacher1)
-        } catch (error) {
-            console.log(error)
-        };
-};
+// for (const teacher1 of entrys1) {
+//     try {
+//         if (teacher1.title == "") teacher.push(teacher1)
+//        } catch (error) {
+//            console.log(error)
+//        };
+// };
 
 // count amounts of rooms
 for (const roamo of entrys2) {
@@ -86,8 +83,8 @@ try {
     console.log(error);
 };
 
-console.log('females:', females.length, '\nmales:', males.length, '\nunknown:', unknown.length, '\nEveryone:', males.length + females.length + unknown.length);
-console.log('\nteachers:', teacher.length);
+// console.log('females:', females.length, '\nmales:', males.length, '\nunknown:', unknown.length, '\nEveryone:', males.length + females.length + unknown.length);
+// console.log('\nteachers:', teacher.length);
 console.log('\nrooms:', roomies.length);
 console.log('classes:', classes.length);
 console.log('\nlast updated:', formattedTime, '\nSchool Year:', SchoolYear.name);
