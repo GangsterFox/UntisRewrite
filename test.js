@@ -4,35 +4,35 @@ const untis = new WebUntis('FTS-Villingen-Schwenningen', 'HayvanDin', 'Dinis2006
 
 // start of script
 untis.login().then(async () => {
-// let females = [];
-// let males = [];
-// let unknown = [];
-// let teacher = [];
+let females = [];
+let males = [];
+let unknown = [];
+let teacher = [];
 
 // fetch the data we need
-// const students = await untis.getStudents();
-// const teachers = await untis.getTeachers();
+const students = await untis.getStudents();
+const teachers = await untis.getTeachers();
 const roomies = await untis.getRooms();
 const classes = await untis.getClasses();
-// const unixtimestamp = await untis.getLatestImportTime();
-// const year = await untis.getLatestSchoolyear();
+const unixtimestamp = await untis.getLatestImportTime();
+const year = await untis.getLatestSchoolyear();
 
 // write every fetch into jsons, gotta rework timestamp and year because its such a waste of space
-// fs.writeFileSync('./students.json', JSON.stringify(students));
-// fs.writeFileSync('./teachers.json', JSON.stringify(teachers));
+fs.writeFileSync('./students.json', JSON.stringify(students));
+fs.writeFileSync('./teachers.json', JSON.stringify(teachers));
 fs.writeFileSync('./rooms.json', JSON.stringify(roomies));
 fs.writeFileSync('./classes.json', JSON.stringify(classes));
-// fs.writeFileSync('./timestamp.json', JSON.stringify(unixtimestamp));
-// fs.writeFileSync('./year.json', JSON.stringify(year));
+fs.writeFileSync('./timestamp.json', JSON.stringify(unixtimestamp));
+fs.writeFileSync('./year.json', JSON.stringify(year));
 console.log("written all data into JSON's\n");
 
 // we require the json fetches
-// const entrys = require("./students.json");
-// const entrys1 = require("./teachers.json");
+const entrys = require("./students.json");
+const entrys1 = require("./teachers.json");
 const entrys2 = require("./rooms.json");
 const entrys3 = require("./classes.json");
-// const writtenDate = require("./timestamp.json");
-// const SchoolYear = require("./year.json");
+const writtenDate = require("./timestamp.json");
+const SchoolYear = require("./year.json");
 
 // user count and genders
 for (const user of entrys) {
@@ -46,13 +46,13 @@ for (const user of entrys) {
 };
 
 // teachers count. also counts the hidden accounts like GT
-// for (const teacher1 of entrys1) {
-//     try {
-//         if (teacher1.title == "") teacher.push(teacher1)
-//        } catch (error) {
-//            console.log(error)
-//        };
-// };
+for (const teacher1 of entrys1) {
+    try {
+        if (teacher1.title == "") teacher.push(teacher1)
+       } catch (error) {
+           console.log(error)
+       };
+};
 
 // count amounts of rooms
 for (const roamo of entrys2) {
@@ -83,8 +83,8 @@ try {
     console.log(error);
 };
 
-// console.log('females:', females.length, '\nmales:', males.length, '\nunknown:', unknown.length, '\nEveryone:', males.length + females.length + unknown.length);
-// console.log('\nteachers:', teacher.length);
+console.log('females:', females.length, '\nmales:', males.length, '\nunknown:', unknown.length, '\nEveryone:', males.length + females.length + unknown.length);
+console.log('\nteachers:', teacher.length);
 console.log('\nrooms:', roomies.length);
 console.log('classes:', classes.length);
 console.log('\nlast updated:', formattedTime, '\nSchool Year:', SchoolYear.name);

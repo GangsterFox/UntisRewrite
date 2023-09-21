@@ -2,6 +2,7 @@
 	"dependencies": {
 		"dotenv": "^16.0.1",
 		"fs": "0.0.1-security",
+		"pnpm": "^8.7.6",
 		"webuntis": "^1.15.0"
 	},
 	"devDependencies": {
