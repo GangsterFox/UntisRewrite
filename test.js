@@ -1,6 +1,8 @@
 const WebUntis = require('webuntis');
 const fs = require('fs');
-const untis = new WebUntis('FTS-Villingen-Schwenningen', 'HayvanDin', 'Dinis2006.', 'arche.webuntis.com')
+const env = require("dotenv");
+env.config();
+const untis = new WebUntis.WebUntisQR(process.env.loginDetails);
 
 // start of script
 untis.login().then(async () => {
