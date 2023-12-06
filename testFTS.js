@@ -9,6 +9,7 @@ const untis = new WebUntis.WebUntisQR(process.env.loginDetails);
 // we worked out that getSubjects, getRooms, getClasses and getHolidays are the things that work and are useful
 // so we're gonna do it like this:
 // getRooms, getClasses, getHolidays, getSubjects and getOwnTimetableForWeek is what we are going to use
+// make a new const with the name kawasaki
 
 // log in
 untis.login().then(async () => {
