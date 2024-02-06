@@ -11,29 +11,29 @@ const untis = new WebUntis.WebUntisQR(process.env.loginDetails);
 untis.login().then(async () => {
 
 // fetch what we need
-const roomies = await untis.getRooms();
-const classisi = await untis.getClasses();
-const holidayo = await untis.getHolidays();
-const subjectoiano = await untis.getSubjects();
-const timetablao = await untis.getOwnTimetableForWeek(new Date());
+const rooms = await untis.getRooms();
+const classes = await untis.getClasses();
+const holidays = await untis.getHolidays();
+const subjects = await untis.getSubjects();
+const timetable = await untis.getOwnTimetableForWeek(new Date());
 // const schuljahro = await untis.getLatestSchoolyear();
 
 // write it into jsons
-fs.writeFileSync('./rooms.json', JSON.stringify(roomies));
-fs.writeFileSync('./classes.json', JSON.stringify(classisi));
-fs.writeFileSync('./holidays.json', JSON.stringify(holidayo));
-fs.writeFileSync('./subjects.json', JSON.stringify(subjectoiano));
-fs.writeFileSync('./timetable.json', JSON.stringify(timetablao));
+fs.writeFileSync('./rooms.json', JSON.stringify(rooms));
+fs.writeFileSync('./classes.json', JSON.stringify(classes));
+fs.writeFileSync('./holidays.json', JSON.stringify(holidays));
+fs.writeFileSync('./subjects.json', JSON.stringify(subjects));
+fs.writeFileSync('./timetable.json', JSON.stringify(timetable));
 console.log("written all data into JSON's");
 
 // console.log(`Current Schoolyear: ${schuljahro.name}`);
 
 // log the amounts
-console.log(`\nAmount of rooms: ${roomies.length}`);
-console.log(`Amount of classes: ${classisi.length}`);
-console.log(`Amount of holidays: ${holidayo.length}`);
-console.log(`Amount of subjects: ${subjectoiano.length}`);
-console.log(`Amount of timetable entries: ${timetablao.length}`);
+console.log(`\nAmount of rooms: ${rooms.length}`);
+console.log(`Amount of classes: ${classes.length}`);
+console.log(`Amount of holidays: ${holidays.length}`);
+console.log(`Amount of subjects: ${subjects.length}`);
+console.log(`Amount of timetable entries: ${timetable.length}`);
 
 // log out
 }).then(() => untis.logout(console.log("\nlogged out"))).catch(console.error);
