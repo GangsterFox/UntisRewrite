@@ -6,6 +6,6 @@ A rewrite for the UntisAPI files I had
 * Counting the different things and showing a console log of it (and also saves the received data into their respective json's)
 
 # Difference between test and testFTS
-* `test.js` was written quite a long time ago when I was still at the GBS
+* `test.js` testing JS for whenever I am trying out different API calls
 * `testFTS.js` was written once I started at my new school, FTS
 * Code quality improved because I was quite stupid back then
