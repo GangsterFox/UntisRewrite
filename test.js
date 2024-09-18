@@ -5,7 +5,7 @@ const untis = new WebUntis.WebUntisAnonymousAuth('GWS Villingen', 'kephiso.webun
 untis.login().then(async () => {
 
 fs.writeFileSync('./testing.json', JSON.stringify(await untis.getClasses()));
-const testing = JSON.parse(fs.readFileSync('./testing.json'));
+const testing = JSON.parse(fs.readFileSync('./output/testing.json'));
 
 console.log(`Amount: ${testing.length}`);
 

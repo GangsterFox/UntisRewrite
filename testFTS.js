@@ -19,11 +19,11 @@ const timetable = await untis.getOwnTimetableForWeek(new Date());
 // const schuljahro = await untis.getLatestSchoolyear();
 
 // write it into jsons
-fs.writeFileSync('./rooms.json', JSON.stringify(rooms));
-fs.writeFileSync('./classes.json', JSON.stringify(classes));
-fs.writeFileSync('./holidays.json', JSON.stringify(holidays));
-fs.writeFileSync('./subjects.json', JSON.stringify(subjects));
-fs.writeFileSync('./timetable.json', JSON.stringify(timetable));
+fs.writeFileSync('./output/rooms.json', JSON.stringify(rooms));
+fs.writeFileSync('./output/classes.json', JSON.stringify(classes));
+fs.writeFileSync('./output/holidays.json', JSON.stringify(holidays));
+fs.writeFileSync('./output/subjects.json', JSON.stringify(subjects));
+fs.writeFileSync('./output/timetable.json', JSON.stringify(timetable));
 console.log("written all data into JSON's");
 
 // console.log(`Current Schoolyear: ${schuljahro.name}`);

@@ -12,11 +12,11 @@ untis.login().then(async () => {
 
     
 // write it into jsons
-const rooms = await untis.getRooms(); fs.writeFileSync('./rooms.json', JSON.stringify(rooms));
-const classes = await untis.getClasses(); fs.writeFileSync('./classes.json', JSON.stringify(classes));
-const holidays = await untis.getHolidays(); fs.writeFileSync('./holidays.json', JSON.stringify(holidays));
-const subjects = await untis.getSubjects(); fs.writeFileSync('./subjects.json', JSON.stringify(subjects));
-const timetable = await untis.getOwnTimetableForWeek(new Date()); fs.writeFileSync('./timetable.json', JSON.stringify(timetable));
+const rooms = await untis.getRooms(); fs.writeFileSync('./output/rooms.json', JSON.stringify(rooms));
+const classes = await untis.getClasses(); fs.writeFileSync('./output/classes.json', JSON.stringify(classes));
+const holidays = await untis.getHolidays(); fs.writeFileSync('./output/holidays.json', JSON.stringify(holidays));
+const subjects = await untis.getSubjects(); fs.writeFileSync('./output/subjects.json', JSON.stringify(subjects));
+const timetable = await untis.getOwnTimetableForWeek(new Date()); fs.writeFileSync('./output/timetable.json', JSON.stringify(timetable));
 //const schoolyear = await untis.getLatestSchoolyear();
 console.log("written all data into JSON's");
   

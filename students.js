@@ -2,7 +2,7 @@ const WebUntisLib = require('webuntis');
 const fs = require('fs');
 const dotenv = require('dotenv');
 dotenv.config()
-const QRCodeData = process.env.QRCodeData
+const QRCodeData = process.env.loginDetails
 
 const untis = new WebUntisLib.WebUntisQR(QRCodeData);
 
